@@ -1,6 +1,6 @@
 Workout Tracker
 
-Already provided with the front end code in the my `Develop` folder, this assignment will required me to create a Mongo database with a Mongoose schema and handle routes with Express.
+Already provided with the front end code in the my `Develop` folder, this project required me to create a Mongo database with a Mongoose schema and handle routes with Express.
 
 ## User Story
 
@@ -14,7 +14,7 @@ A consumer will reach their fitness goals quicker when they track their workout 
 
 When the user loads the page, they will be given the option to create a new workout, or continue with their last workout.
 
-The user should be able to:
+The user will be able to:
 
   * Add exercises to a previous workout plan.
 
