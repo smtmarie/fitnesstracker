@@ -1,6 +1,6 @@
 Workout Tracker
 
-Already provided with the front end code in the my `Develop` folder, this project required me to create a Mongo database with a Mongoose schema and handle routes with Express.
+This full stack development project required me to create a Mongo database with a Mongoose schema and handle routes with Express.
 
 ## User Story
 
