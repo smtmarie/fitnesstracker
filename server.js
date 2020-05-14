@@ -28,3 +28,10 @@ app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
  
+// HEROKU DEPLOYMENT
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+// Connect to the Mongo DB
+mongoose.connect(MONGODB_URI);
