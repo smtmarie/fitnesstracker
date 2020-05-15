@@ -13,25 +13,23 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/workout",{
+// HEROKU DEPLOYMENT
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
+mongoose.connect(MONGODB_URI);
 
-  useNewUrlParser: true,
-  useFindAndModify: false
 
-});
+// mongoose.connect("mongodb://localhost/workout",{
 
-app.use(require("./routes/api.js"));
-app.use(require("./routes/view.js"));
+//   useNewUrlParser: true,
+//   useFindAndModify: false
+
+// });
+
+app.use(require("./routes/api"));
+app.use(require("./routes/view"));
 
 app.listen(PORT, () => {
 
-  console.log(`App running on port ${PORT}!`);
+  console.log(`App running on port ${PORT}`);
 });
  
-// HEROKU DEPLOYMENT
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
-
-// Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
